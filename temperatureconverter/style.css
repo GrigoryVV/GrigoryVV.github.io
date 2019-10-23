@@ -17,10 +17,11 @@ input {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #E6DB74;
     background-color: #1E1F1C;
-    width: 90%;
+    width: 100%;
     border: 0px;
     text-align: center;
     height: 25vh;
+    
 }
 hr {
     color: #414339;
@@ -37,8 +38,25 @@ ul {
 :focus:-ms-input-placeholder      {color: transparent}
 span {
     color:#A2E22E;
-    writing-mode: vertical-rl;
 }
 li {
     text-align: center;
+    position: relative;
+}
+
+/*span positioning*/
+#cel {
+    position: absolute;
+    right: 3%;
+    top: 48%;
+}
+#fahr {
+    position: absolute;
+    right: 3%;
+    top: 48%;
+}
+#kel {
+    position: absolute;
+    right: 3%;
+    top: 48%;
 }
