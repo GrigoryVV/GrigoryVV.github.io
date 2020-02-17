@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grigory Vlasov / algo-viso</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet"> 
+</head>
+<body>
+   
+    <section class="section section-project">
+        <div class="section-container" id="project">
+            <div class="section-project-headings">
+                <h2>
+                    Algorithm Visualizator
+                </h2>
+                <p>
+                    &mdash; Визуализатор алгоритмов сортировки &mdash;
+                </p>
+            </div>
+            <!-- /.section-project-headings -->
+            <div class="section-project-links">
+                <div class="section-project-links__link">
+                    <a href="https://grigoryvv.github.io/algo-viso/">Вебсайт</a>
+                </div>
+                <div class="section-project-links__link">
+                    <a href="https://github.com/GrigoryVV/algo-viso">Github репозиторий</a>
+                </div>
+            </div>
+            <!-- /.section-project-links -->
+            <div class="section-project-slideshow">
+                <div class="section-project-slideshow__prev">
+                    Предыдущий
+                </div>
+                <div class="section-project-slideshow__slider">
+                    <img class="mySlides"
+                        src="/img/projects/algoViso/1.PNG"
+                        alt="screenshot"
+                    >
+                    <img class="mySlides"
+                        src="/img/projects/algoViso/2.PNG"
+                        alt="screenshot"
+                    >
+                    <img class="mySlides"
+                        src="/img/projects/algoViso/3.PNG"
+                        alt="screenshot"
+                    >
+                    <img class="mySlides"
+                        src="/img/projects/algoViso/4.PNG"
+                        alt="screenshot"
+                    >
+                </div>
+                <div class="section-project-slideshow__next">
+                    Следующий
+                </div>
+            </div>
+            <!-- /.section-project-slideshow -->
+            <div class="section-project-info">
+                <h3>Идея</h3>
+                <div class="info">
+                    <p>
+                        Идея данного проекта возникла после прохождения курса МФТИ "алгоритмы и структуры данных на Python". Первой задачей проекта являлась имплементация алгоритмов сортировки на языке JavaScript. Вторая задача - визуализация с использованием библиотек React и Redux.
+                    </p>
+                </div>
+                <h3>Описание</h3>
+                <div class="info">
+                    <p>
+                        Визуализатор алгоритмов позволяет посмотреть как работают следующие алгоритмы сортировки:
+                    </p>
+                    <ul>
+                        <li>Сортировка вствками</li>
+                        <li>Сортировка выбором</li>
+                        <li>Сортировка методом пузырька</li>
+                        <li>Сортировка слиянием</li>
+                        <li>Быстрая сортировка</li>
+                    </ul>
+                    <p>
+                        На проекте мною было поставлено условие соблюдение FLUX круговорота на каждое изменение UI. Это условие стало основной сложностью при работе с алгоритмами, т.к. каждую перестановку пришлось фиксировать в State. 
+                    </p>
+                </div>
+            </div>
+            <!-- /.section-project-bio -->
+            <footer class="section-project-footer">
+                <div class="section-project-footer__content">
+                    Новосибирск. 2020.
+                </div>
+                <div class="section-project-footer__arrow">
+                    <a href="index.html#works"><img src="/img/arrowicon.png" alt="Next Section"></a>
+                    <div>Назад</div>
+                </div>
+                <div class="section-project-footer__social">
+                    <div><a href="/index.html#contacts"><i class="icon-mail-alt"></i></a></div>
+                    <div><a href="https://github.com/GrigoryVV"><i class="icon-github-circled"></i></a></div>
+                    <div><a href="#"><i class="icon-linkedin"></i></a></div>
+                </div>
+            </footer>
+            <!-- /.section-project-footer -->
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 1;
+
+        let prev = document.getElementsByClassName("section-project-slideshow__prev")[0];
+        prev.onclick = () => {
+            plusDivs(-1)
+        }
+        let next = document.getElementsByClassName("section-project-slideshow__next")[0];
+        next.onclick = () => {
+            plusDivs(1)
+        }
+
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+        const x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (let i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grigory Vlasov / Reactive Social Network</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet"> 
+</head>
+<body>
+   
+    <section class="section section-project">
+        <div class="section-container" id="project">
+            <div class="section-project-headings">
+                <h2>
+                    Reactive Social Network
+                </h2>
+                <p>
+                    &mdash; Проект социальной сети &mdash;
+                </p>
+            </div>
+            <!-- /.section-project-headings -->
+            <div class="section-project-links">
+                <div class="section-project-links__link">
+                    <a href="https://grigoryvv.github.io/reactive-social-network/">Вебсайт</a>
+                </div>
+                <div class="section-project-links__link">
+                    <a href="https://github.com/GrigoryVV/reactive-social-network">Github репозиторий</a>
+                </div>
+            </div>
+            <!-- /.section-project-links -->
+            <div class="section-project-slideshow">
+                <div class="section-project-slideshow__prev">
+                    Предыдущий
+                </div>
+                <div class="section-project-slideshow__slider">
+                    <img class="mySlides"
+                        src="/img/projects/socialNetwork/1.PNG"
+                        alt="screenshot"
+                    >
+                    <img class="mySlides"
+                        src="/img/projects/socialNetwork/2.PNG"
+                        alt="screenshot"
+                    >
+                    <img class="mySlides"
+                        src="/img/projects/socialNetwork/3.PNG"
+                        alt="screenshot"
+                    >
+                    <img class="mySlides"
+                        src="/img/projects/socialNetwork/4.PNG"
+                        alt="screenshot"
+                    >
+                </div>
+                <div class="section-project-slideshow__next">
+                    Следующий
+                </div>
+            </div>
+            <!-- /.section-project-slideshow -->
+            <div class="section-project-info">
+                <h3>Использование</h3>
+                <div class="info">
+                    <p>
+                        Для того чтобы полноценно использовать социальную сеть вам необходимо войти, для этого используйте следующие данные:<br>
+                        <b>Email: free@samuraijs.com</b><br>
+                        <b>Password: free </b>
+                    </p>
+                </div>
+                <h3>Описание</h3>
+                <div class="info">
+                    <p>
+                        Reactive Social Network это домашний проект социальной сети, разрабатываемый на React.JS с использованием библиотеки Redux. Проект находится в стадии активной разработки, поэтому реализован не весь функционал. На данный момент в социальной сети возможно:
+                    </p>
+                    <ul>
+                        <li>Просматривать профили других пользователей</li>
+                        <li>Подписываться и отписываться</li>
+                        <li>Редактировать свой профиль</li>
+                        <li>Редактировать статус</li>
+                        <li>Загружать фото аватар</li>
+                        <li>Логиниться</li>
+                    </ul>
+                    <p>
+                        В рамках данного проекта я использовал следующие инструменты и технологии:
+                    </p>
+                    <ul>
+                        <li>React/Redux</li>
+                        <li>Redux-thunk</li>
+                        <li>Redux-Form</li>
+                        <li>High Order Components</li>
+                        <li>React Hooks</li>
+                        <li>Axios</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.section-project-bio -->
+            <footer class="section-project-footer">
+                <div class="section-project-footer__content">
+                    Новосибирск. 2020.
+                </div>
+                <div class="section-project-footer__arrow">
+                    <a href="index.html#works"><img src="/img/arrowicon.png" alt="Next Section"></a>
+                    <div>Назад</div>
+                </div>
+                <div class="section-project-footer__social">
+                    <div><a href="/index.html#contacts"><i class="icon-mail-alt"></i></a></div>
+                    <div><a href="https://github.com/GrigoryVV"><i class="icon-github-circled"></i></a></div>
+                    <div><a href="#"><i class="icon-linkedin"></i></a></div>
+                </div>
+            </footer>
+            <!-- /.section-project-footer -->
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 1;
+
+        let prev = document.getElementsByClassName("section-project-slideshow__prev")[0];
+        prev.onclick = () => {
+            plusDivs(-1)
+        }
+        let next = document.getElementsByClassName("section-project-slideshow__next")[0];
+        next.onclick = () => {
+            plusDivs(1)
+        }
+
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+        const x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (let i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grigory Vlasov / Track your bugs</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet"> 
+</head>
+<body>
+   
+    <section class="section section-project">
+        <div class="section-container" id="project">
+            <div class="section-project-headings">
+                <h2>
+                    Track Your Bugs
+                </h2>
+                <p>
+                    &mdash; Баг Трекер &mdash;
+                </p>
+            </div>
+            <!-- /.section-project-headings -->
+            <div class="section-project-links">
+                <div class="section-project-links__link">
+                    <a href="http://p90953vl.beget.tech/">Вебсайт</a>
+                </div>
+                <div class="section-project-links__link">
+                    <a href="https://github.com/GrigoryVV/TrackYourBugs-webApp">Github репозиторий</a>
+                </div>
+            </div>
+            <!-- /.section-project-links -->
+            <div class="section-project-slideshow">
+                <div class="section-project-slideshow__prev">
+                    Предыдущий
+                </div>
+                <div class="section-project-slideshow__slider">
+                    <img class="mySlides"
+                        src="/img/projects/bugTracker/1.PNG"
+                        alt="screenshot"
+                    >
+                    <img class="mySlides"
+                        src="/img/projects/bugTracker/2.PNG"
+                        alt="screenshot"
+                    >
+                    <img class="mySlides"
+                        src="/img/projects/bugTracker/3.PNG"
+                        alt="screenshot"
+                    >
+                    <img class="mySlides"
+                        src="/img/projects/bugTracker/4.PNG"
+                        alt="screenshot"
+                    >
+                    <img class="mySlides"
+                        src="/img/projects/bugTracker/5.PNG"
+                        alt="screenshot"
+                    >
+                </div>
+                <div class="section-project-slideshow__next">
+                    Следующий
+                </div>
+            </div>
+            <!-- /.section-project-slideshow -->
+            <div class="section-project-info">
+                <h3>Использование</h3>
+                <div class="info">
+                    <p>
+                        Для просмотра проекта можно воспользоваться тестовым аккаунтом:<br>
+                        <b>Email - test@mail.ru</b><br>
+                        <b>Password - test</b>
+                    </p>
+                </div>
+                <h3>Описание</h3>
+                <div class="info">
+                    <p>
+                        TrackYourBugs-webApp - это небольшое web приложение для отслеживания багов в небольших проектах. Оно было создано с использованием "чистого" JavaScript и PHP в качестве языка backend. Проект создавался для использования его функционала в будущих собственных домашних проектах и получения необходимой практики работы с JavaScript.
+                    </p>
+                    <p>
+                        Задачи, которые были решены при разработке проекта:
+                    </p>
+                    <ul>
+                        <li>Отработать взаимодействие с элементами DOM посредством vanilla JavaScript</li>
+                        <li>Освоить взаимодействие с сервером с помощью AJAX запросов</li>
+                        <li>Создать инструмент валидации форм</li>
+                        <li>Освоить обработку данных ответа сервера</li>
+                        <li>Сделать интерфейс приложения адаптивным к экранам планшетов</li>
+                    </ul>
+                    <p>
+                        В рамках данного проекта я использовал следующие инструменты и технологии:
+                    </p>
+                    <ul>
+                        <li>Vanilla JavaScript</li>
+                        <li>XMLHttpRequest</li>
+                        <li>Gulp.js для минификации и сборки</li>
+                        <li>Materialize CSS для стилизации</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.section-project-bio -->
+            <footer class="section-project-footer">
+                <div class="section-project-footer__content">
+                    Новосибирск. 2020.
+                </div>
+                <div class="section-project-footer__arrow">
+                    <a href="index.html#works"><img src="/img/arrowicon.png" alt="Next Section"></a>
+                    <div>Назад</div>
+                </div>
+                <div class="section-project-footer__social">
+                    <div><a href="/index.html#contacts"><i class="icon-mail-alt"></i></a></div>
+                    <div><a href="https://github.com/GrigoryVV"><i class="icon-github-circled"></i></a></div>
+                    <div><a href="#"><i class="icon-linkedin"></i></a></div>
+                </div>
+            </footer>
+            <!-- /.section-project-footer -->
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 1;
+
+        let prev = document.getElementsByClassName("section-project-slideshow__prev")[0];
+        prev.onclick = () => {
+            plusDivs(-1)
+        }
+        let next = document.getElementsByClassName("section-project-slideshow__next")[0];
+        next.onclick = () => {
+            plusDivs(1)
+        }
+
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+        const x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (let i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+        }
+
+    </script>
+</body>
+</html>
