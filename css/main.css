@@ -311,12 +311,12 @@ body {
     margin: 0.5rem 0; }
 .section-about-footer {
   width: 100%;
-  display: none;
   display: flex;
   align-items: center;
   font-weight: 700;
   font-size: 1.6rem;
-  padding-bottom: 3rem; }
+  padding-bottom: 3rem;
+  display: none; }
   .section-about-footer__arrow {
     margin: 0 auto;
     display: none; }
