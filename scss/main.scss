@@ -455,6 +455,7 @@ body {
     }
     &-footer {
         width: 100%;
+        display: none;
         @include footer-styles;
     }
 }
@@ -548,6 +549,7 @@ body {
         }
         &-footer {
             @include footer-styles-desktop;
+            display: block;
         }
     }
 }
@@ -633,6 +635,7 @@ body {
     }
     &-footer {
         @include footer-styles;
+        display: none;
     }
 }
 
@@ -737,6 +740,7 @@ body {
         }
         &-footer {
             @include footer-styles-desktop;
+            display: block;
         }
     }
 }
