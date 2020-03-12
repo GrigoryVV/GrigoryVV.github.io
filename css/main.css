@@ -337,8 +337,10 @@ body {
         border-color: #ffffff; }
 
 @media (min-width: 425px) {
-  .section-about-footer {
-    display: none; } }
+  .section-about-footer__arrow {
+    display: block; }
+  .section-about-footer__social {
+    margin-left: 0; } }
 @media (min-width: 768px) {
   .section-about .section-container {
     margin: 4rem auto; }
@@ -373,7 +375,8 @@ body {
     .section-about-bio .info ul li {
       font-size: 2.5rem; }
   .section-about-footer {
-    display: none; } }
+    font-size: 1.8rem;
+    padding-bottom: 5rem; } }
 @media (min-width: 1300px) {
   .section-about .section-container {
     margin: 8rem auto;
@@ -399,9 +402,9 @@ body {
   .section-about-bio {
     padding: 8rem 0; }
   .section-about-footer {
+    display: flex;
     font-size: 2rem;
-    padding-bottom: 8rem;
-    display: block; }
+    padding-bottom: 8rem; }
     .section-about-footer__arrow img {
       width: 100%; }
     .section-about-footer__content {
@@ -506,8 +509,10 @@ body {
         border-color: #ffffff; }
 
 @media (min-width: 425px) {
-  .section-works-footer {
-    display: none; } }
+  .section-works-footer__arrow {
+    display: block; }
+  .section-works-footer__social {
+    margin-left: 0; } }
 @media (min-width: 768px) {
   .section-works .section-container {
     margin: 4rem auto; }
@@ -519,7 +524,8 @@ body {
       font-size: 3rem;
       margin: 2rem 0 6rem; }
   .section-works-footer {
-    display: none; } }
+    font-size: 1.8rem;
+    padding-bottom: 5rem; } }
 @media (min-width: 1300px) {
   .section-works .section-container {
     margin: 8rem auto;
@@ -579,9 +585,9 @@ body {
     .section-works-example:hover .section-works-example__slider, .section-works-example:focus .section-works-example__slider {
       margin-right: 10%; }
   .section-works-footer {
+    display: flex;
     font-size: 2rem;
-    padding-bottom: 8rem;
-    display: block; }
+    padding-bottom: 8rem; }
     .section-works-footer__arrow img {
       width: 100%; }
     .section-works-footer__content {
@@ -655,10 +661,6 @@ body {
       .section-contacts-footer__social a:hover {
         color: #ffffff;
         border-color: #ffffff; }
-  .section-contacts-footer__content {
-    margin-left: 10rem; }
-  .section-contacts-footer__social {
-    margin-right: 10rem; }
 
 @media (min-width: 425px) {
   .section-contacts-footer__arrow {

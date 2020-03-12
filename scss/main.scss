@@ -463,7 +463,7 @@ body {
 @media(min-width: 425px) {
     .section-about {
         &-footer {
-            display: none;
+            @include footer-styles-large-mobile;
         }
     }
 }
@@ -516,7 +516,7 @@ body {
             }
         }
         &-footer {
-            display: none;
+            @include footer-styles-tablet;
         }
     }
 }
@@ -548,8 +548,8 @@ body {
             padding: 8rem 0;
         }
         &-footer {
+            display: flex;
             @include footer-styles-desktop;
-            display: block;
         }
     }
 }
@@ -642,7 +642,7 @@ body {
 @media(min-width: 425px) {
     .section-works {
         &-footer {
-            display: none;
+            @include footer-styles-large-mobile;
         }
     }
 }
@@ -655,7 +655,7 @@ body {
             @include headings-tablet;
         }
         &-footer {
-            display: none;
+            @include footer-styles-tablet;
         }
     }
 }
@@ -739,8 +739,8 @@ body {
             }
         }
         &-footer {
+            display: flex;
             @include footer-styles-desktop;
-            display: block;
         }
     }
 }
@@ -790,12 +790,6 @@ body {
 
     &-footer {
         @include footer-styles;
-        &__content {
-            margin-left: 10rem;
-        }
-        &__social {
-            margin-right: 10rem;
-        }
     }
 }
 
